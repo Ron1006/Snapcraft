@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="Snapcraft.PicDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Snapcraft"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#1b1731">
+
+    <Grid Margin="20">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+
+        </Grid.RowDefinitions>
+
+        <Button 
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                BorderThickness="0"
+                Click="HomeButton_Click"
+                Margin="0,0,0,0">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Assets/home_icon.png" Width="30" Height="30" Margin="0,0,0,0"/>
+            </StackPanel>
+        </Button>
+        <Image x:Name="MyImage" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Uniform"/>
+
+        <Button Content="Download"
+                Grid.Row="2"
+                Grid.Column="0"
+                Width="auto"
+                Height="40"
+                Margin="0,0,5,0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Bottom"
+                Background="#e84828"
+                BorderThickness="0"
+                CornerRadius="20"/>
+        <Button Content="Upscale"
+                Grid.Row="2"
+                Grid.Column="1"
+                Width="auto"
+                Height="40"
+                Margin="5,0,0,0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Bottom"
+                Background="#e84828"
+                BorderThickness="0"
+                CornerRadius="20"/>     
+    </Grid>
+</Page>

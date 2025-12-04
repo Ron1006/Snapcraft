@@ -1,0 +1,112 @@
+﻿<Page
+    x:Class="Snapcraft.Upgrade"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Snapcraft"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#1b1731">
+
+    <Grid Margin="20">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+
+        <Button 
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="Transparent"
+            BorderThickness="0"
+            Click="HomeButton_Click"
+            Margin="0,0,0,0">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Assets/home_icon.png" Width="30" Height="30" Margin="0,0,0,0"/>
+            </StackPanel>
+        </Button>
+        <Image x:Name="MyImage" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Uniform"/>
+
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="How your free trial works" 
+    FontSize="28" Foreground="White" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Bottom" TextWrapping="Wrap" Margin="0,40,0,40"/>
+
+        <!--Center Content-->
+        <Grid Background="#1b1731" Padding="20" Grid.Row="2" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Row 1 -->
+            <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center">
+                <Ellipse Width="40" Height="40" Fill="#FF5722" VerticalAlignment="Center"/>
+                <Image Source="Assets/upgrade_icon1.png" Width="26" Height="26" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
+                <!-- Line-->
+                <Line X1="20" Y1="0" X2="20" Y2="120" Stroke="#73628a" StrokeThickness="2"/>
+            </StackPanel>
+            <StackPanel Grid.Row="0" Grid.Column="1" Margin="10,0,0,20">
+                <TextBlock Text="Today" FontSize="16" FontWeight="Bold" Foreground="White"/>
+                <TextBlock Text="Start enjoying full access to advanced editing features." FontSize="14" Foreground="White" TextWrapping="Wrap" Margin="0,5,0,0"/>
+            </StackPanel>
+
+            <!-- Row 2 -->
+            <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center">
+                <Ellipse Width="40" Height="40" Fill="#73628a" VerticalAlignment="Center"/>
+                <Image Source="Assets/upgrade_icon2.png" Width="26" Height="26" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
+                <!-- Line -->
+                <Line X1="20" Y1="0" X2="20" Y2="120" Stroke="#73628a" StrokeThickness="2"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="10,0,0,20">
+                <TextBlock Text="In 5 days" FontSize="16" FontWeight="Bold" Foreground="White"/>
+                <TextBlock Text="You’ll get a reminder that your trial is about to end." FontSize="14" Foreground="White" TextWrapping="Wrap" Margin="0,5,0,0"/>
+            </StackPanel>
+
+            <!-- Row 3 -->
+            <StackPanel Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">
+                <Ellipse Width="40" Height="40" Fill="#73628a" VerticalAlignment="Center"/>
+                <Image Source="Assets/upgrade_icon3.png" Width="26" Height="26" HorizontalAlignment="Center" Margin="0,-40,0,0"/>
+ 
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="1" Margin="10,0,0,20">
+                <TextBlock Text="In 7 days" FontSize="16" FontWeight="Bold" Foreground="White"/>
+                <TextBlock Text="Your Pro subscription will begin and you’ll be charged. Cancel anytime before." FontSize="14" Foreground="White" TextWrapping="Wrap" Margin="0,5,0,0"/>
+            </StackPanel>
+        </Grid>
+
+
+        <TextBlock Grid.Row="3" Grid.ColumnSpan="2" Text="7-day free trial, then $99.99/year($1.92/week)" 
+            FontSize="14" Foreground="White" TextAlignment="Center" VerticalAlignment="Bottom" TextWrapping="Wrap" Margin="0,0,0,10"/>
+
+        <Button Content="Start free trial"
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Width="auto"
+            Height="45"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Bottom"
+            Background="#e84828"
+            BorderThickness="0"
+                FontSize="18"
+            CornerRadius="25"/>
+    </Grid>
+</Page>
